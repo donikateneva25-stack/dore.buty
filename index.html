@@ -114,7 +114,7 @@ UV/LED печки|Luxe Nails|Smart UV печка 96W|234|#d8c3a5
 Червила|Rare Beauty|Stay Vulnerable Glossy Balm|43|#e8d5c4|cb1
 Червила|Dior|Rouge Dior Lipstick|99|#e8d5c4|cb2`.split("\n").map((l,i)=>{const[s,b,n,p,c,m]=l.split("|");return{id:i,s,b,n,p:+p,c,m}});
 const kind=s=>({"Мъжки":"p","Дамски":"p","Унисекс":"p","Луксозни":"p","Фондьотени":"f","Червила":"l","Сенки":"e","Кремове за лице":"j","Серуми":"d","Грижа за тяло":"j","Гел лакове":"n","Пили за нокти":"i","UV/LED печки":"u"}[s]);
-function art(x){if(x.m)return `<img src="images/${x.m}.jpg" alt="${x.n}">`;const c=x.c,k=kind(x.s),g="#c9a24b";let h="";
+function art(x){if(x.m)return `<img src="${x.m}.jpg" alt="${x.n}">`;const c=x.c,k=kind(x.s),g="#c9a24b";let h="";
 if(k=="p")h=`<rect x="75" y="55" width="50" height="14" fill="${g}"/><rect x="88" y="42" width="24" height="14" fill="${g}"/><rect x="50" y="68" width="100" height="100" rx="8" fill="${c}"/><rect x="62" y="80" width="76" height="40" fill="#fff8" rx="3"/>`;
 if(k=="f")h=`<rect x="90" y="30" width="20" height="20" fill="${g}"/><rect x="96" y="48" width="8" height="18" fill="#fff"/><rect x="72" y="65" width="56" height="105" rx="6" fill="${c}"/><rect x="80" y="100" width="40" height="30" fill="#fff8"/>`;
 if(k=="l")h=`<rect x="82" y="110" width="36" height="55" fill="${g}"/><rect x="86" y="55" width="28" height="58" fill="#222"/><path d="M88 55 L112 55 L106 28 L90 34Z" fill="${c}"/>`;
